@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -11,6 +11,14 @@
 		84DBC3FD2606411E00349653 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC3FC2606411E00349653 /* ContentView.swift */; };
 		84DBC3FF2606411F00349653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DBC3FE2606411F00349653 /* Assets.xcassets */; };
 		84DBC4022606411F00349653 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DBC4012606411F00349653 /* Preview Assets.xcassets */; };
+		84DBC40F2606419300349653 /* PostApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC40E2606419300349653 /* PostApi.swift */; };
+		84DBC413260641B600349653 /* ApiManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC412260641B600349653 /* ApiManager.swift */; };
+		84DBC417260641EC00349653 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC416260641EC00349653 /* PostCell.swift */; };
+		84DBC41B2606420A00349653 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC41A2606420A00349653 /* Post.swift */; };
+		84DBC41E2606422400349653 /* PostVIPBadge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC41D2606422400349653 /* PostVIPBadge.swift */; };
+		84DBC422260642BD00349653 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = 84DBC421260642BD00349653 /* Moya */; };
+		84DBC426260642CD00349653 /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 84DBC425260642CD00349653 /* Kingfisher */; };
+		84DBC42A260642E300349653 /* HandyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 84DBC429260642E300349653 /* HandyJSON */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +28,11 @@
 		84DBC3FE2606411F00349653 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84DBC4012606411F00349653 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		84DBC4032606411F00349653 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84DBC40E2606419300349653 /* PostApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostApi.swift; sourceTree = "<group>"; };
+		84DBC412260641B600349653 /* ApiManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiManager.swift; sourceTree = "<group>"; };
+		84DBC416260641EC00349653 /* PostCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
+		84DBC41A2606420A00349653 /* Post.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		84DBC41D2606422400349653 /* PostVIPBadge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostVIPBadge.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,6 +40,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DBC42A260642E300349653 /* HandyJSON in Frameworks */,
+				84DBC426260642CD00349653 /* Kingfisher in Frameworks */,
+				84DBC422260642BD00349653 /* Moya in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +68,8 @@
 		84DBC3F92606411E00349653 /* SwiftUI_Weibo */ = {
 			isa = PBXGroup;
 			children = (
+				84DBC415260641D700349653 /* View */,
+				84DBC40A2606416B00349653 /* Api */,
 				84DBC3FA2606411E00349653 /* SwiftUI_WeiboApp.swift */,
 				84DBC3FC2606411E00349653 /* ContentView.swift */,
 				84DBC3FE2606411F00349653 /* Assets.xcassets */,
@@ -67,6 +85,25 @@
 				84DBC4012606411F00349653 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		84DBC40A2606416B00349653 /* Api */ = {
+			isa = PBXGroup;
+			children = (
+				84DBC40E2606419300349653 /* PostApi.swift */,
+				84DBC412260641B600349653 /* ApiManager.swift */,
+			);
+			path = Api;
+			sourceTree = "<group>";
+		};
+		84DBC415260641D700349653 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				84DBC416260641EC00349653 /* PostCell.swift */,
+				84DBC41A2606420A00349653 /* Post.swift */,
+				84DBC41D2606422400349653 /* PostVIPBadge.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -85,6 +122,11 @@
 			dependencies = (
 			);
 			name = SwiftUI_Weibo;
+			packageProductDependencies = (
+				84DBC421260642BD00349653 /* Moya */,
+				84DBC425260642CD00349653 /* Kingfisher */,
+				84DBC429260642E300349653 /* HandyJSON */,
+			);
 			productName = SwiftUI_Weibo;
 			productReference = 84DBC3F72606411E00349653 /* SwiftUI_Weibo.app */;
 			productType = "com.apple.product-type.application";
@@ -112,6 +154,11 @@
 				Base,
 			);
 			mainGroup = 84DBC3EE2606411E00349653;
+			packageReferences = (
+				84DBC420260642BD00349653 /* XCRemoteSwiftPackageReference "Moya" */,
+				84DBC424260642CD00349653 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				84DBC428260642E300349653 /* XCRemoteSwiftPackageReference "HandyJSON" */,
+			);
 			productRefGroup = 84DBC3F82606411E00349653 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -138,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84DBC413260641B600349653 /* ApiManager.swift in Sources */,
 				84DBC3FD2606411E00349653 /* ContentView.swift in Sources */,
+				84DBC40F2606419300349653 /* PostApi.swift in Sources */,
+				84DBC41B2606420A00349653 /* Post.swift in Sources */,
 				84DBC3FB2606411E00349653 /* SwiftUI_WeiboApp.swift in Sources */,
+				84DBC417260641EC00349653 /* PostCell.swift in Sources */,
+				84DBC41E2606422400349653 /* PostVIPBadge.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,6 +380,51 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84DBC420260642BD00349653 /* XCRemoteSwiftPackageReference "Moya" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Moya/Moya.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 14.0.1;
+			};
+		};
+		84DBC424260642CD00349653 /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 6.2.1;
+			};
+		};
+		84DBC428260642E300349653 /* XCRemoteSwiftPackageReference "HandyJSON" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/alibaba/HandyJSON.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84DBC421260642BD00349653 /* Moya */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84DBC420260642BD00349653 /* XCRemoteSwiftPackageReference "Moya" */;
+			productName = Moya;
+		};
+		84DBC425260642CD00349653 /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84DBC424260642CD00349653 /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
+		};
+		84DBC429260642E300349653 /* HandyJSON */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84DBC428260642E300349653 /* XCRemoteSwiftPackageReference "HandyJSON" */;
+			productName = HandyJSON;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 84DBC3EF2606411E00349653 /* Project object */;
 }

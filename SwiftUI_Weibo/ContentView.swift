@@ -6,11 +6,21 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 struct ContentView: View {
+    @State private var showingAlert = false
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+//        KFImage(URL(string: "https://github.com/xiaoyouxinqing/PostDemo/raw/master/PostDemo/Resources/006PdkDogy1gap6ngiyn3j30u011idle.jpg")!)
+        Button("Show Alert") {
+            self.showingAlert = true
+        }
+        .alert(isPresented: $showingAlert) {
+            Alert(title: Text("Hello SwiftUI!"),
+                  message: Text("This is some detail message"),
+                  dismissButton: .default(Text("OK")))
+        }
     }
 }
 
