@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		84797B0B26539A95004E60D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797B0A26539A95004E60D2 /* User.swift */; };
+		84797B0D26539B7F004E60D2 /* UserApi.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797B0C26539B7F004E60D2 /* UserApi.swift */; };
+		84797B0F2653A1A9004E60D2 /* MoyaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84797B0E2653A1A8004E60D2 /* MoyaConfig.swift */; };
 		84DBC3FB2606411E00349653 /* SwiftUI_WeiboApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC3FA2606411E00349653 /* SwiftUI_WeiboApp.swift */; };
 		84DBC3FD2606411E00349653 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84DBC3FC2606411E00349653 /* ContentView.swift */; };
 		84DBC3FF2606411F00349653 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84DBC3FE2606411F00349653 /* Assets.xcassets */; };
@@ -22,6 +25,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		84797B0A26539A95004E60D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		84797B0C26539B7F004E60D2 /* UserApi.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserApi.swift; sourceTree = "<group>"; };
+		84797B0E2653A1A8004E60D2 /* MoyaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoyaConfig.swift; sourceTree = "<group>"; };
 		84DBC3F72606411E00349653 /* SwiftUI_Weibo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftUI_Weibo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84DBC3FA2606411E00349653 /* SwiftUI_WeiboApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI_WeiboApp.swift; sourceTree = "<group>"; };
 		84DBC3FC2606411E00349653 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -49,6 +55,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		843AF0C72653F4CA002E5BC0 /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				84797B0E2653A1A8004E60D2 /* MoyaConfig.swift */,
+				84DBC412260641B600349653 /* ApiManager.swift */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		843AF0C82653F4FC002E5BC0 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				84DBC41A2606420A00349653 /* Post.swift */,
+				84797B0A26539A95004E60D2 /* User.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		84DBC3EE2606411E00349653 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +92,7 @@
 		84DBC3F92606411E00349653 /* SwiftUI_Weibo */ = {
 			isa = PBXGroup;
 			children = (
+				843AF0C82653F4FC002E5BC0 /* Model */,
 				84DBC415260641D700349653 /* View */,
 				84DBC40A2606416B00349653 /* Api */,
 				84DBC3FA2606411E00349653 /* SwiftUI_WeiboApp.swift */,
@@ -90,8 +115,9 @@
 		84DBC40A2606416B00349653 /* Api */ = {
 			isa = PBXGroup;
 			children = (
+				843AF0C72653F4CA002E5BC0 /* Config */,
 				84DBC40E2606419300349653 /* PostApi.swift */,
-				84DBC412260641B600349653 /* ApiManager.swift */,
+				84797B0C26539B7F004E60D2 /* UserApi.swift */,
 			);
 			path = Api;
 			sourceTree = "<group>";
@@ -100,7 +126,6 @@
 			isa = PBXGroup;
 			children = (
 				84DBC416260641EC00349653 /* PostCell.swift */,
-				84DBC41A2606420A00349653 /* Post.swift */,
 				84DBC41D2606422400349653 /* PostVIPBadge.swift */,
 			);
 			path = View;
@@ -189,7 +214,10 @@
 				84DBC3FD2606411E00349653 /* ContentView.swift in Sources */,
 				84DBC40F2606419300349653 /* PostApi.swift in Sources */,
 				84DBC41B2606420A00349653 /* Post.swift in Sources */,
+				84797B0B26539A95004E60D2 /* User.swift in Sources */,
+				84797B0F2653A1A9004E60D2 /* MoyaConfig.swift in Sources */,
 				84DBC3FB2606411E00349653 /* SwiftUI_WeiboApp.swift in Sources */,
+				84797B0D26539B7F004E60D2 /* UserApi.swift in Sources */,
 				84DBC417260641EC00349653 /* PostCell.swift in Sources */,
 				84DBC41E2606422400349653 /* PostVIPBadge.swift in Sources */,
 			);

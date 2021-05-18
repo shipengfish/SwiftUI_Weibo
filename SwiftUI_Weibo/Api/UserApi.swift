@@ -1,37 +1,33 @@
 //
-//  PostApi.swift
+//  UserApi.swift
 //  SwiftUI_Weibo
 //
-//  Created by admin on 2021/3/20.
+//  Created by admin on 2021/5/18.
 //
 
 import Foundation
 import Moya
 import HandyJSON
 
-enum PostApi {
-    // 推荐列表
-    case recommendList
-    // 热门列表
-    case hotList
+enum UserApi {
+    // 分页列表
+    case page
 }
 
-extension PostApi: TargetType {
+extension UserApi: TargetType {
     var baseURL: URL {
         return URL(string: BaseURL)!
     }
     
     var path: String {
         switch self {
-        case .recommendList: return "/PostListData_recommend_1.json"
-        case .hotList: return "/PostListData_hot_1.json"
+        case .page: return "/user/page"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .recommendList: return .get
-        case .hotList: return .get
+        case .page: return .get
         }
     }
     
@@ -41,10 +37,7 @@ extension PostApi: TargetType {
     
     var task: Task {
         switch self {
-        case .recommendList:
-            return .requestParameters(parameters: ["pageNum": 1, "pageSize": 10], encoding: URLEncoding.default)
-            
-        case .hotList:
+        case .page:
             return .requestParameters(parameters: ["pageNum": 1, "pageSize": 10], encoding: URLEncoding.default)
         }
     }
