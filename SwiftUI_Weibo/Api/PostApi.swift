@@ -23,8 +23,8 @@ extension PostApi: TargetType {
     
     var path: String {
         switch self {
-        case .recommendList: return "/PostListData_recommend_1.json"
-        case .hotList: return "/PostListData_hot_1.json"
+        case .recommendList: return "/recommend/list"
+        case .hotList: return "/hot/list"
         }
     }
     

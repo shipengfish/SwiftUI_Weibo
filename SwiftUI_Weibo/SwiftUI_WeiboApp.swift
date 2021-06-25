@@ -11,7 +11,7 @@ import SwiftUI
 struct SwiftUI_WeiboApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView().environmentObject(UserData.testData)
         }
     }
 }

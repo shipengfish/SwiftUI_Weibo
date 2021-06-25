@@ -6,9 +6,9 @@
 //
 
 import Foundation
+import Alamofire
 import Moya
 import HandyJSON
-import Alamofire
 
 // 请求成功回调
 typealias SuccessCallback<T: HandyJSON> = ((T) -> Void)

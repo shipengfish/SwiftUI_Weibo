@@ -6,32 +6,16 @@
 //
 
 import SwiftUI
-import Kingfisher
-import HandyJSON
 
 struct ContentView: View {
-    @State private var showingAlert = false
-    
+    @EnvironmentObject var userData: UserData
+
     var body: some View {
-        KFImage(URL(string: "https://github.com/xiaoyouxinqing/PostDemo/raw/master/PostDemo/Resources/006PdkDogy1gap6ngiyn3j30u011idle.jpg")!)
-        Button("Show Alert") {
-            self.showingAlert = true
-        }
-        .alert(isPresented: $showingAlert) {
-            
-            request(UserApi.page, UserList.self) { (users) in
-                print("用户列表:\(String(describing: users.list![0].realName!))")
+        NavigationView {
+            NavigationLink(destination: PostListView() ) {
+                Text("点击我")
+                    .font(.system(size: 30))
             }
-
-            return Alert(title: Text("Hello SwiftUI!"),
-                  message: Text("This is some detail message"),
-                  dismissButton: .default(Text("OK")))
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
     }
 }

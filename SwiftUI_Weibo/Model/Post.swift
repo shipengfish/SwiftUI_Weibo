@@ -7,12 +7,13 @@
 
 import Foundation
 import HandyJSON
+import Kingfisher
 
 struct PostList: HandyJSON {
     var list: [Post]?
 }
 
-struct Post: HandyJSON {
+struct Post: HandyJSON, Identifiable {
     var id: Int = 0
     // 头像
     var avatar: String?
@@ -34,4 +35,22 @@ struct Post: HandyJSON {
     var likeCount: Int = 0
     // 是否点赞
     var isLiked: Bool = false
+}
+
+extension Post {
+    var avatarImage: KFImage {
+        return KFImage(URL(string: PicURL + avatar!))
+    }
+    
+    var commentCountText: String {
+        if commentCount <= 0 { return "评论" }
+        if commentCount < 1000 { return "\(commentCount)" }
+        return String(format: "%.1fK", Double(commentCount) / 1000)
+    }
+    
+    var likeCountText: String {
+        if likeCount <= 0 { return "点赞" }
+        if likeCount < 1000 { return "\(likeCount)" }
+        return String(format: "%.1fK", Double(likeCount) / 1000)
+    }
 }
